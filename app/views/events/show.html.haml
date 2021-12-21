@@ -51,7 +51,7 @@
       %ul.list-group.list-group-flush
         - @tickets.each do |ticket|
           %li.list-group-item
-            = link_to(url_for_github(thicket.user), class: "card-link") do
+            = link_to(url_for_github(ticket.user), class: "card-link") do
               = image_tag ticket.user.image_url, width: 20, height: 20
-              = "#{@ticket.user.name}"
-            = ticket_comment
+              = "#{ticket.user.name}"
+            = ticket.comment
